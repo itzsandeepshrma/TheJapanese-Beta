@@ -16,7 +16,7 @@ Flask-SocketIO==5.3.0
 pydantic==1.10.13
 schedule==1.1.0
 pytest==7.2.2
-loguru==0.6.0
+loguru==0.7.3
 bcrypt==4.0.1
 pyttsx3==2.98
 beautifulsoup4==4.12.0
