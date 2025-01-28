@@ -2,7 +2,7 @@ Flask==2.2.5
 Flask-SQLAlchemy==2.5.1
 Flask-Cors==4.0.2
 python-dotenv==0.21.1
-pytgcalls==0.5.1
+pytgcalls==2.1.0
 cryptography==43.0.1
 requests==2.32.2
 aiohttp==3.10.11
