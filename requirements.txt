@@ -14,9 +14,13 @@ aiohttp==3.11.11
 
 requests==2.32.3
 aiohttp==3.10.11
+dependabot/pip/pyrogram-2.0.106
+pyrogram==2.0.106
+
 
 pyrogram==2.0.19
 dependabot/pip/instabot-0.117.0
+
 telethon==1.24.0
 instabot==0.117.0
 
