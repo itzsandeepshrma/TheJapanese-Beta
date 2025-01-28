@@ -7,7 +7,6 @@ Flask-SQLAlchemy==2.5.1
 Flask-Cors==5.0.0
 python-dotenv==0.21.1
 pytgcalls==2.1.0
-python-telegram-bot
 cryptography==43.0.1
 dependabot/pip/aiohttp-3.11.11
 requests==2.32.2
