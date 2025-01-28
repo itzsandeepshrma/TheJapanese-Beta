@@ -8,8 +8,13 @@ Flask-Cors==4.0.2
 python-dotenv==0.21.1
 pytgcalls==0.5.1
 cryptography==43.0.1
+dependabot/pip/aiohttp-3.11.11
+requests==2.32.2
+aiohttp==3.11.11
+
 requests==2.32.3
 aiohttp==3.10.11
+
 pyrogram==2.0.19
 telethon==1.38.1
 instabot==0.5.0
@@ -30,7 +35,7 @@ bcrypt==4.2.1
 pyttsx3==2.98
 beautifulsoup4==4.12.3
 tweepy==4.15.0
- dependabot/pip/numpy-2.2.2
+dependabot/pip/numpy-2.2.2
 numpy==2.2.2
 pandas==1.5.2
 
