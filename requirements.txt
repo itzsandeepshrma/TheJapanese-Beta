@@ -1,4 +1,8 @@
+ependabot/pip/flask-3.1.0
+Flask==3.1.0
+
 Flask==2.2.5
+
 Flask-SQLAlchemy==2.5.1
 Flask-Cors==4.0.2
 python-dotenv==0.21.1
