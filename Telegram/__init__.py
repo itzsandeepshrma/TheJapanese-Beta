@@ -1,8 +1,9 @@
 import os
+import logging
 from dotenv import load_dotenv
 from pyrogram import Client
 from pyrogram.errors import FloodWait
-import logging
+import sys
 
 # Load environment variables
 load_dotenv()
@@ -20,10 +21,15 @@ logging.basicConfig(level=LOG_LEVEL.upper())
 logger = logging.getLogger(__name__)
 
 # Initialize the bot client
-if STRING_SESSION:
-    client = Client("bot_session", api_id=API_ID, api_hash=API_HASH, string_session=STRING_SESSION)
-else:
-    client = Client("bot_session", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+try:
+    if STRING_SESSION:
+        client = Client("bot_session", api_id=API_ID, api_hash=API_HASH, string_session=STRING_SESSION)
+    else:
+        client = Client("bot_session", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
+    logger.info("Bot client initialized successfully.")
+except Exception as e:
+    logger.error(f"Error initializing bot client: {e}")
+    sys.exit(1)
 
 # Log the bot startup
 def start_bot():
@@ -32,12 +38,23 @@ def start_bot():
         logger.info(f"Bot started as {client.get_me().username}")
     except Exception as e:
         logger.error(f"Error starting bot: {e}")
+        sys.exit(1)
 
 # Stop the bot gracefully
 def stop_bot():
-    client.stop()
-    logger.info("Bot stopped.")
+    try:
+        client.stop()
+        logger.info("Bot stopped.")
+    except Exception as e:
+        logger.error(f"Error stopping bot: {e}")
 
 # Start the bot
 if __name__ == "__main__":
-    start_bot()
+    try:
+        logger.info("Starting bot...")
+        start_bot()
+    except KeyboardInterrupt:
+        stop_bot()
+    except Exception as e:
+        logger.error(f"An unexpected error occurred: {e}")
+        stop_bot()
