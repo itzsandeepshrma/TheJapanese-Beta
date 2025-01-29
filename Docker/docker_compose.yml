@@ -1,0 +1,33 @@
+version: '3'
+services:
+  telegram-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.python
+    environment:
+      - TELEGRAM_API_ID=${TELEGRAM_API_ID}
+      - TELEGRAM_API_HASH=${TELEGRAM_API_HASH}
+      - TELEGRAM_BOT_TOKEN=${TELEGRAM_BOT_TOKEN}
+    restart: always
+
+  whatsapp-bot:
+    build:
+      context: .
+      dockerfile: Dockerfile.nodejs
+    environment:
+      - WA_SESSION_NAME=${WA_SESSION_NAME}
+    restart: always
+
+  go-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.go
+    environment:
+      - API_KEY=${API_KEY}
+    restart: always
+
+  rust-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile.rust
+    restart: always
