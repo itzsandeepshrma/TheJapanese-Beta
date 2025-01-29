@@ -15,3 +15,10 @@ async def ai_chat(client, message: Message):
             prompt=message.text,
             max_tokens=100,
             n=1,
+            stop=None,
+            temperature=0.7
+        )
+        reply = response.choices[0].text.strip()
+        await message.reply(reply)
+    except Exception as e:
+        await message.reply("I'm having trouble responding right now. Please try again later.")
