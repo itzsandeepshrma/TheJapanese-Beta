@@ -39,7 +39,7 @@
     "node-numpy": "^0.0.3",
     "@google-cloud/text-to-speech": "^4.4.0",
     "jest": "^29.7.0",
-    "@adiwajshing/baileys": "^3.4.0"  // Added Baileys library
+    "@adiwajshing/baileys": "^3.4.0"
   },
   "devDependencies": {
     "eslint": "^8.54.0"
