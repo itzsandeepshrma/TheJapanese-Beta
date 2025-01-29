@@ -7,7 +7,7 @@ cryptography==44.0.0
 requests==2.32.2
 aiohttp==3.10.11
 pyrogram==2.1.0
-telethon==1.29.0
+telethon==1.38.1
 instabot==0.119.0
 instagram-private-api==2.0.0
 PyJWT==3.0.0
