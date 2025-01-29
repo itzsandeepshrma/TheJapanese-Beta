@@ -17,7 +17,7 @@ schedule==2.0.0
 pydantic==2.4.0
 pytest==8.4.0
 loguru==0.8.0
-bcrypt==4.1.0
+bcrypt==4.2.1
 pyttsx3==3.0.0
 beautifulsoup4==5.0.0
 tweepy==4.17.0
