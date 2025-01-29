@@ -1,0 +1,20 @@
+version: 2
+updates:
+  - package-ecosystem: "pip"
+    directory: "/" # The directory where your requirements.txt is located
+    schedule:
+      interval: "daily"
+    ignore:
+      # Ignore specific dependencies if necessary
+      - dependency-name: "Flask"
+        versions:
+          - "3.1.0" # Keep this version fixed if needed
+      - dependency-name: "aiohttp"
+        versions:
+          - "3.11.11"
+      - dependency-name: "requests"
+        versions:
+          - "2.32.3"
+      - dependency-name: "loguru"
+        versions:
+          - "0.7.3"
