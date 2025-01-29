@@ -14,7 +14,7 @@ PyJWT==3.0.0
 Flask-Login==0.7.0
 Flask-SocketIO==6.0.0
 schedule==2.0.0
-pydantic==2.4.0
+pydantic==2.10.6
 pytest==8.4.0
 loguru==0.8.0
 bcrypt==4.1.0
