@@ -4,24 +4,23 @@
   "description": "The Japanese by Team Japanese",
   "main": "./WhatsApp/bot.js",
   "scripts": {
-    "start": "teamjapanese -s bot.js",
+    "start": "teamjapanese -s bot.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/TeamJapanese/The-Japanese.git"
   },
-    "keywords": [
+  "keywords": [
     "whatsapp",
     "userbot",
     "teamjapanese",
     "bot",
     "japan",
     "java",
-    "whatsapp",
     "ai",
     "meta",
     "whatsapp meta",
-    "whatsapp ai studio",
+    "whatsapp ai studio"
   ],
   "dependencies": {
     "express": "^4.18.2", 
@@ -46,9 +45,9 @@
   },
   "author": "TeamJapanese",
   "developer": "@itzsandeepshrma",
-  "license": "MIT"
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/TeamJapanese/The-Japanese/issues"
   },
-  "homepage": "https://github.com/TeamJapanese/The-Japanese/#readme",
+  "homepage": "https://github.com/TeamJapanese/The-Japanese#readme"
 }
