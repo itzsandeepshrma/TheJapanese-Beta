@@ -1,9 +1,12 @@
 import os
-from dotenv import load_dotenv
-from cryptography.fernet import Fernet
 import logging
 import sys
+from dotenv import load_dotenv
+from cryptography.fernet import Fernet
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
 
+# Load environment variables
 load_dotenv()
 
 def generate_key():
@@ -21,35 +24,27 @@ def decrypt_sensitive_data(encrypted_data: bytes, key: bytes):
 
 ENCRYPTION_KEY = os.getenv("ENCRYPTION_KEY", generate_key().decode())
 
+# Telegram bot related env variables
 API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 STRING_SESSION = os.getenv("STRING_SESSION")
 OWNER_ID = os.getenv("OWNER_ID")
 
-WA_API_ID = os.getenv("WA_API_ID")
-WA_API_HASH = os.getenv("WA_API_HASH")
-WA_BOT_TOKEN = os.getenv("WA_BOT_TOKEN")
-
-INSTAGRAM_USERNAME = os.getenv("INSTAGRAM_USERNAME")
-INSTAGRAM_PASSWORD = os.getenv("INSTAGRAM_PASSWORD")
-INSTAGRAM_API_KEY = os.getenv("INSTAGRAM_API_KEY")
-
+# Database configuration (SQLAlchemy)
 DB_URI = os.getenv("DB_URI", "sqlite:///db.sqlite3")
 DB_NAME = os.getenv("DB_NAME", "bot_db")
 
+# Proxy and deployment configuration
 PROXY = os.getenv("PROXY", None)
 DEPLOYMENT_MODE = os.getenv("DEPLOYMENT_MODE", "production")
 TIMEZONE = os.getenv("TIMEZONE", "Asia/Kolkata")
 
-TELEGRAM_GROUP_ID = os.getenv("TELEGRAM_GROUP_ID")
-TELEGRAM_CHANNEL_ID = os.getenv("TELEGRAM_CHANNEL_ID")
-
+# Logging configuration
 ENABLE_LOGGING = os.getenv("ENABLE_LOGGING", "True") == "True"
 LOG_LEVEL = os.getenv("LOG_LEVEL", "DEBUG").upper()
-ENABLE_AUTO_UPDATES = os.getenv("ENABLE_AUTO_UPDATES", "True") == "True"
-ENABLE_SESSION_SAVE = os.getenv("ENABLE_SESSION_SAVE", "True") == "True"
 
+# Configure logging
 logging.basicConfig(level=LOG_LEVEL, format="%(asctime)s - %(levelname)s - %(message)s")
 logger = logging.getLogger()
 
@@ -59,13 +54,7 @@ def validate_env_vars():
         "API_HASH": API_HASH,
         "BOT_TOKEN": BOT_TOKEN,
         "STRING_SESSION": STRING_SESSION,
-        "OWNER_ID": OWNER_ID,
-        "WA_API_ID": WA_API_ID,
-        "WA_API_HASH": WA_API_HASH,
-        "WA_BOT_TOKEN": WA_BOT_TOKEN,
-        "INSTAGRAM_USERNAME": INSTAGRAM_USERNAME,
-        "INSTAGRAM_PASSWORD": INSTAGRAM_PASSWORD,
-        "INSTAGRAM_API_KEY": INSTAGRAM_API_KEY
+        "OWNER_ID": OWNER_ID
     }
 
     for var, value in required_vars.items():
@@ -81,15 +70,6 @@ def print_config():
     logger.info(f"STRING_SESSION: {STRING_SESSION}")
     logger.info(f"OWNER_ID: {OWNER_ID}")
     
-    logger.info("\n📱 WhatsApp Configuration 📱")
-    logger.info(f"WA_API_ID: {WA_API_ID}")
-    logger.info(f"WA_API_HASH: {WA_API_HASH}")
-    logger.info(f"WA_BOT_TOKEN: {WA_BOT_TOKEN}")
-    
-    logger.info("\n📸 Instagram Configuration 📸")
-    logger.info(f"INSTAGRAM_USERNAME: {INSTAGRAM_USERNAME}")
-    logger.info(f"INSTAGRAM_API_KEY: {INSTAGRAM_API_KEY}")
-    
     logger.info("\n🗄️ Database Configuration 🗄️")
     logger.info(f"DB_URI: {DB_URI}")
     logger.info(f"DB_NAME: {DB_NAME}")
@@ -100,14 +80,31 @@ def print_config():
     logger.info(f"TIMEZONE: {TIMEZONE}")
     logger.info(f"ENABLE_LOGGING: {ENABLE_LOGGING}")
     logger.info(f"LOG_LEVEL: {LOG_LEVEL}")
-    logger.info(f"ENABLE_AUTO_UPDATES: {ENABLE_AUTO_UPDATES}")
-    logger.info(f"ENABLE_SESSION_SAVE: {ENABLE_SESSION_SAVE}")
 
-encrypted_instagram_password = encrypt_sensitive_data(INSTAGRAM_PASSWORD, ENCRYPTION_KEY)
-logger.info(f"Encrypted Instagram password: {encrypted_instagram_password}")
+# Encrypt sensitive data like owner ID if needed
+encrypted_owner_id = encrypt_sensitive_data(OWNER_ID, ENCRYPTION_KEY)
+logger.info(f"Encrypted Owner ID: {encrypted_owner_id}")
 
-decrypted_instagram_password = decrypt_sensitive_data(encrypted_instagram_password, ENCRYPTION_KEY)
-logger.info(f"Decrypted Instagram password: {decrypted_instagram_password}")
+# Decrypt sensitive data like owner ID if needed
+decrypted_owner_id = decrypt_sensitive_data(encrypted_owner_id, ENCRYPTION_KEY)
+logger.info(f"Decrypted Owner ID: {decrypted_owner_id}")
+
+# Set up SQLAlchemy for database connection
+engine = create_engine(DB_URI)
+Session = sessionmaker(bind=engine)
+session = Session()
+
+# Example: Define a simple table
+from sqlalchemy import Column, Integer, String
+
+class User(session):
+    __tablename__ = 'users'
+    id = Column(Integer, primary_key=True)
+    username = Column(String, unique=True)
+    password = Column(String)
+
+# Create tables if not exist
+Base.metadata.create_all(engine)
 
 if __name__ == "__main__":
     try:
