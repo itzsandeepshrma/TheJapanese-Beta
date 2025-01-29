@@ -17,8 +17,11 @@ API_ID = os.getenv("API_ID")
 API_HASH = os.getenv("API_HASH")
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 
-if not all([API_ID, API_HASH, BOT_TOKEN]):
-    logger.error("API_ID, API_HASH, or BOT_TOKEN is missing in the environment variables.")
+# Check for missing environment variables
+missing_vars = [var for var in ["API_ID", "API_HASH", "BOT_TOKEN"] if not os.getenv(var)]
+if missing_vars:
+    for var in missing_vars:
+        logger.error(f"Missing environment variable: {var}")
     sys.exit(1)
 
 # Create a Pyrogram Client instance
@@ -47,6 +50,8 @@ if __name__ == "__main__":
     try:
         logger.info("Starting The-Japanese Bot...")
         client.run()  # Runs the bot until it is manually stopped
+    except KeyboardInterrupt:
+        logger.info("Bot stopped by user.")
     except Exception as e:
         logger.error(f"An error occurred: {e}")
         sys.exit(1)
