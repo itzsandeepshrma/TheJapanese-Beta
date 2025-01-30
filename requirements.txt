@@ -32,7 +32,7 @@ pillow
 requests
 qrcode
 openai
-googletrans==4.0.0-rc1
+googletrans==4.0.2
 pyttsx3
 gTTS
 sqlite3
