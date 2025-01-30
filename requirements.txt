@@ -23,7 +23,7 @@ beautifulsoup4==5.0.0
 tweepy==4.17.0
 numpy==2.2.2
 pandas==2.3.0
-redis==4.0.0
+redis==5.2.1
 APScheduler==3.11.0
 yt-dlp==2024.11.04
 gtts
