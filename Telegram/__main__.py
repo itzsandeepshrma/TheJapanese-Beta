@@ -69,6 +69,10 @@ async def handle_start(client: Client, message: Message):
 @bot.on_message(filters.command("play"))
 async def play_user_song(client, message):
     try:
+        if len(message.text.split(" ")) < 2:
+            await message.reply("Please provide a song name after /play.")
+            return
+        
         query = message.text.split(" ", 1)[1]  # Get song name
         song_url = search_and_download_song(query)
         
@@ -77,8 +81,6 @@ async def play_user_song(client, message):
             await message.reply(f"Now playing: {query}")
         else:
             await message.reply("Failed to find or download the song. Please try again.")
-    except IndexError:
-        await message.reply("Please provide a song name after /play.")
     except Exception as e:
         logger.error(f"Error in /play command: {e}")
         await message.reply(f"Error: {e}")
@@ -88,11 +90,23 @@ async def play_user_song(client, message):
 async def handle_text(client: Client, message: Message):
     await echo(client, message)
 
+# Custom startup message
+async def send_startup_message():
+    try:
+        # Define the chat ID where you want to send the custom message (e.g., your personal chat or group chat)
+        chat_id = os.getenv("CHAT_ID")  # You can set this in your .env file
+        custom_message = "The Japanese is alive! ✨🌸 How can I help you, my master?"
+        await bot.send_message(chat_id, custom_message)
+        logger.info("Startup message sent successfully.")
+    except Exception as e:
+        logger.error(f"Error sending startup message: {e}")
+
 # Start the bot
 if __name__ == "__main__":
     try:
         logger.info("Starting The-Japanese Bot...")
         bot.run()
+        send_startup_message()  # Send the custom startup message once the bot is ready
     except KeyboardInterrupt:
         logger.info("Bot stopped by user.")
     except Exception as e:
