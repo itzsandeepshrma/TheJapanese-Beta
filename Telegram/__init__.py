@@ -20,13 +20,21 @@ LOG_LEVEL = os.getenv("LOG_LEVEL", "DEBUG")
 logging.basicConfig(level=LOG_LEVEL.upper())
 logger = logging.getLogger(__name__)
 
+# Check if all required environment variables are present
+missing_vars = [var for var in ["API_ID", "API_HASH", "BOT_TOKEN"] if not os.getenv(var)]
+if missing_vars:
+    for var in missing_vars:
+        logger.error(f"Missing environment variable: {var}")
+    sys.exit(1)
+
 # Initialize the bot client
 try:
     if STRING_SESSION:
         client = Client("bot_session", api_id=API_ID, api_hash=API_HASH, string_session=STRING_SESSION)
+        logger.info("Bot client initialized with STRING_SESSION.")
     else:
         client = Client("bot_session", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
-    logger.info("Bot client initialized successfully.")
+        logger.info("Bot client initialized with BOT_TOKEN.")
 except Exception as e:
     logger.error(f"Error initializing bot client: {e}")
     sys.exit(1)
