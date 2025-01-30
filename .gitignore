@@ -280,3 +280,7 @@ Dockerfile*
 *.pid
 *.seed
 *.sqlite
+
+database.db
+config.env
+__pycache__/
