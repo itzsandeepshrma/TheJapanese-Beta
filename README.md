@@ -4,8 +4,42 @@
 </h2>
 
 ![20250128_172356](https://github.com/user-attachments/assets/8d5b6dd5-53da-4023-9d0c-7cbd104bf723)
+  
+<p align="center">
+<a href="https://github.com/TeamJapanese/The-Japanese/stargazers"><img src="https://img.shields.io/github/stars/TeamJapanese/The-Japanese?color=black&logo=github&logoColor=black&style=for-the-badge" alt="Stars"/></a>
+<a href="https://github.com/TeamJapanese/The-Japanese/network/members"> <img src="https://img.shields.io/github/forks/TeamJapanese/The-Japanese?color=black&logo=github&logoColor=black&style=for-the-badge"/></a>
+<a href="https://github.com/TeamJapanese/The-Japanese/blob/master/LICENSE"> <img src="https://img.shields.io/badge/License-MIT-blueviolet?style=for-the-badge" alt="License"/></a>
+<a href="https://www.python.org/">
+  <img src="https://img.shields.io/badge/Written%20in-Python-blue?style=for-the-badge&logo=python" alt="Python"/>
+</a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript">
+  <img src="https://img.shields.io/badge/Written%20in-JavaScript-yellow?style=for-the-badge&logo=javascript" alt="JavaScript"/>
+</a>
+</p>
 
-**ᴍɪᴛ ʟɪᴄᴇɴꜱᴇ**
+
+🔥 **[ᴛʜᴇ-ᴊᴀᴘᴀɴᴇꜱᴇ](https://github.com/TeamJapanese/The-Japanese)** ɪꜱ ᴛʜᴇ **ꜰᴀꜱᴛᴇꜱᴛ, ᴍᴏꜱᴛ ᴀᴅᴠᴀɴᴄᴇᴅ, ᴀɴᴅ ᴀɪ-ᴘᴏᴡᴇʀᴇᴅ** ᴍᴜʟᴛɪ-ᴘʟᴀᴛꜰᴏʀᴍ ᴜꜱᴇʀʙᴏᴛ, ᴅᴇᴠᴇʟᴏᴘᴇᴅ ʙʏ **[ᴛᴇᴀᴍ ᴊᴀᴘᴀɴᴇꜱᴇ](https://github.com/TeamJapanese)**. ɪᴛ ꜱᴇᴀᴍʟᴇꜱꜱʟʏ ɪɴᴛᴇɢʀᴀᴛᴇꜱ ᴡɪᴛʜ **ɪɴꜱᴛᴀɢʀᴀᴍ, ᴡʜᴀᴛꜱᴀᴘᴘ, ᴀɴᴅ ᴍᴏʀᴇ**, ᴘʀᴏᴠɪᴅɪɴɢ ᴀɴ **ᴀʟʟ-ɪɴ-ᴏɴᴇ ᴀᴜᴛᴏᴍᴀᴛɪᴏɴ ꜱᴏʟᴜᴛɪᴏɴ** ꜰᴏʀ **ᴍᴏᴅᴇʀᴀᴛɪᴏɴ, ᴀᴜᴛᴏᴍᴀᴛɪᴏɴ, ᴀɴᴅ ᴄᴜꜱᴛᴏᴍ ᴄᴏᴍᴍᴀɴᴅꜱ**—ᴀʟʟ ᴡɪᴛʜɪɴ ᴀ **ꜱɪɴɢʟᴇ, ᴘᴏᴡᴇʀꜰᴜʟ ʀᴇᴘᴏꜱɪᴛᴏʀʏ**.  
+
+---
+
+## ✨ **ᴋᴇʏ ꜰᴇᴀᴛᴜʀᴇꜱ**  
+✅ **ᴍᴜʟᴛɪ-ᴘʟᴀᴛꜰᴏʀᴍ ꜱᴜᴘᴘᴏʀᴛ** – ᴡᴏʀᴋꜱ ᴏɴ ɪɴꜱᴛᴀɢʀᴀᴍ, ᴡʜᴀᴛꜱᴀᴘᴘ & ᴍᴏʀᴇ  
+✅ **ᴜʟᴛʀᴀ-ꜰᴀꜱᴛ ᴘᴇʀꜰᴏʀᴍᴀɴᴄᴇ** – ᴏᴘᴛɪᴍɪᴢᴇᴅ ꜰᴏʀ ꜱᴘᴇᴇᴅ & ᴇꜰꜰɪᴄɪᴇɴᴄʏ  
+✅ **ᴀɪ-ᴘᴏᴡᴇʀᴇᴅ ᴀᴜᴛᴏᴍᴀᴛɪᴏɴ** – ɪɴᴛᴇʟʟɪɢᴇɴᴛ ᴀɴᴅ ᴀᴅᴀᴘᴛɪᴠᴇ ᴄᴏᴍᴍᴀɴᴅ ᴇxᴇᴄᴜᴛɪᴏɴ  
+✅ **ʜɪɢʜʟʏ ᴄᴜꜱᴛᴏᴍɪᴢᴀʙʟᴇ** – ᴍᴏᴅɪꜰʏ ᴄᴏᴍᴍᴀɴᴅꜱ ᴀɴᴅ ꜰᴜɴᴄᴛɪᴏɴꜱ ᴇᴀꜱɪʟʏ  
+✅ **ꜱᴄᴀʟᴀʙʟᴇ & ꜰᴜᴛᴜʀᴇ-ʀᴇᴀᴅʏ** – ʀᴇɢᴜʟᴀʀ ᴜᴘᴅᴀᴛᴇꜱ ᴡɪᴛʜ ɴᴇxᴛ-ɢᴇɴ ᴇɴʜᴀɴᴄᴇᴍᴇɴᴛꜱ  
+✅ **ꜱᴇᴄᴜʀᴇ & ʀᴇʟɪᴀʙʟᴇ** – ʙᴜɪʟᴛ ᴡɪᴛʜ ꜱᴛʀᴏɴɢ ꜱᴇᴄᴜʀɪᴛʏ ᴀɴᴅ ᴅᴀᴛᴀ ᴘʀᴏᴛᴇᴄᴛɪᴏɴ  
+
+---
+
+## 🛠 **ᴛᴇᴄʜ ꜱᴛᴀᴄᴋ**  
+- **ᴘʀᴏɢʀᴀᴍᴍɪɴɢ ʟᴀɴɢᴜᴀɢᴇꜱ:** ᴘʏᴛʜᴏɴ 🐍, ᴊᴀᴠᴀꜱᴄʀɪᴘᴛ ⚡  
+- **ᴅᴀᴛᴀʙᴀꜱᴇ ᴍᴀɴᴀɢᴇᴍᴇɴᴛ:** ꜱǫʟ 🗄️  
+- **ᴅᴇᴠᴇʟᴏᴘᴍᴇɴᴛ ᴀᴘᴘʀᴏᴀᴄʜ:** ꜱᴄᴀʟᴀʙʟᴇ ᴀʀᴄʜɪᴛᴇᴄᴛᴜʀᴇ, ᴀɪ-ᴘᴏᴡᴇʀᴇᴅ ᴀᴜᴛᴏᴍᴀᴛɪᴏɴ 🤖  
+
+---
+
+# **ᴍɪᴛ ʟɪᴄᴇɴꜱᴇ**
 
 **ᴄᴏᴘʏʀɪɢʜᴛ (ᴄ) 𝟤𝟢𝟤𝟧 [ᴛᴇᴀᴍᴊᴀᴘᴀɴᴇꜱᴇ](https://github.com/TeamJapanese/)**
 
