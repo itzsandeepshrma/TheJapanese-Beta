@@ -7,7 +7,7 @@ cryptography==44.0.0
 requests==2.32.2
 aiohttp==3.11.10
 apscheduler==3.8.1
-gpytranslate==1.0.0
+gpytranslate==2.0.0
 pyrogram==2.1.0
 telethon==1.38.1
 instabot==0.119.0
