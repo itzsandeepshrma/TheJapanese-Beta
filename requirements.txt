@@ -9,10 +9,8 @@ aiohttp==3.11.10
 dependabot/pip/gpytranslate-2.0.0
 apscheduler==3.8.1
 gpytranslate==2.0.0
-
 apscheduler==3.11.0
 gpytranslate==1.0.0
-
 pyrogram==2.1.0
 telethon==1.38.1
 instabot==0.119.0
@@ -44,7 +42,12 @@ pyttsx3
 gTTS
 sqlite3
 Tuple 
-
+tgcrypto
+pymongo
+mysql-connector-python
+numpy
+tensorflow
+opencv-python
 
 
 
