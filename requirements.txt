@@ -48,7 +48,12 @@ mysql-connector-python
 numpy
 tensorflow
 opencv-python
+speechrecognition==3.8.1
+textblob==0.15.3
 
-
-
-
+express@4.17.1
+puppeteer@19.0.0
+axios@0.21.1
+mongodb@3.6.4
+whatsapp-web.js@1.15.2
+dotenv@8.2.0
