@@ -6,7 +6,7 @@ pytgcalls==3.0.0
 cryptography==44.0.0
 requests==2.32.2
 aiohttp==3.11.10
-ependabot/pip/gpytranslate-2.0.0
+dependabot/pip/gpytranslate-2.0.0
 apscheduler==3.8.1
 gpytranslate==2.0.0
 
