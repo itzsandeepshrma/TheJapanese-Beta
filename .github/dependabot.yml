@@ -11,6 +11,7 @@ updates:
     ignore:
       - dependency-name: "tensorflow"
     versioning-strategy: increase-if-necessary
+    security-updates: true
 
   - package-ecosystem: "npm"
     directory: "/"
@@ -23,19 +24,4 @@ updates:
     ignore:
       - dependency-name: "react"
     versioning-strategy: increase-if-necessary
-
-  - package-ecosystem: "pip"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    allow:
-      - dependency-type: "direct"
-    security-updates: true
-
-  - package-ecosystem: "npm"
-    directory: "/"
-    schedule:
-      interval: "daily"
-    allow:
-      - dependency-type: "direct"
     security-updates: true
