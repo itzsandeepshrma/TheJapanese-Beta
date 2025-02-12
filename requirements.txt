@@ -1,2 +1,6 @@
 pyttsx3
-pytgcalls 
+pytgcalls==3.0.0
+pyrogram==2.1.0
+telethon==1.38.1
+yt-dlp==2025.1.26
+requests
