@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Japanese</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, sans-serif; scroll-behavior: smooth; }
+        body { background: black; color: white; overflow-x: hidden; }
+        canvas { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: -1; }
+        nav { display: flex; justify-content: space-between; align-items: center; padding: 15px 50px; background: rgba(0, 0, 0, 0.8); position: fixed; width: 100%; top: 0; z-index: 1000; transition: 0.3s; }
+        nav h2 { font-size: 22px; font-weight: bold; letter-spacing: 2px; }
+        nav ul { list-style: none; display: flex; }
+        nav ul li { margin: 0 20px; }
+        nav ul li a { text-decoration: none; color: white; font-size: 18px; transition: 0.3s; }
+        nav ul li a:hover { color: red; }
+        .hero { height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; flex-direction: column; }
+        .hero h1 { font-size: 50px; text-transform: uppercase; letter-spacing: 2px; animation: fadeIn 1.5s ease-in-out; }
+        .hero p { font-size: 18px; margin-top: 10px; opacity: 0.9; }
+        .hero button { margin-top: 20px; padding: 12px 25px; font-size: 20px; background: linear-gradient(90deg, red, darkred); color: white; border: none; cursor: pointer; transition: 0.3s; border-radius: 5px; box-shadow: 0 0 10px red; }
+        .hero button:hover { background: white; color: red; transform: scale(1.05); box-shadow: 0 0 15px red; }
+        .contact { display: none; padding: 50px; text-align: center; background: rgba(255, 255, 255, 0.1); margin: 50px auto; width: 50%; border-radius: 10px; }
+        .contact input, .contact textarea { width: 100%; margin-top: 10px; padding: 12px; font-size: 16px; border: none; border-radius: 5px; background: rgba(255, 255, 255, 0.2); color: white; }
+        .contact button { margin-top: 20px; padding: 12px 25px; font-size: 18px; background: red; color: white; border: none; cursor: pointer; transition: 0.3s; }
+        .contact button:hover { background: white; color: red; }
+        @keyframes fadeIn { 0% { opacity: 0; transform: translateY(-20px); } 100% { opacity: 1; transform: translateY(0); } }
+    </style>
+</head>
+<body>
+    <nav>
+        <h2>Team Japanese</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#contact" onclick="showContact()">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="hero">
+        <h1>Welcome to Team Japanese</h1>
+        <p>The world's fastest and most advanced multi-platform Userbot.</p>
+        <button onclick="playMusic()">Play Music</button>
+    </div>
+    <div id="contact" class="contact">
+        <h2>Contact Team Japanese</h2>
+        <input type="text" placeholder="Name">
+        <input type="email" placeholder="Email">
+        <textarea placeholder="Message"></textarea>
+        <button>Send</button>
+    </div>
+    <canvas id="bg"></canvas>
+    <script>
+        function showContact() { document.getElementById('contact').style.display = 'block'; }
+        function playMusic() { alert("Music Playing (Feature Coming Soon)"); }
+        const canvas = document.getElementById("bg"), ctx = canvas.getContext("2d");
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        const particles = [];
+        for (let i = 0; i < 120; i++) {
+            particles.push({ 
+                x: Math.random() * canvas.width, 
+                y: Math.random() * canvas.height, 
+                vx: (Math.random() - 0.5) * 2, 
+                vy: (Math.random() - 0.5) * 2 
+            });
+        }
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.x += p.vx; p.y += p.vy;
+                if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+                ctx.fillStyle = "white"; 
+                ctx.fillRect(p.x, p.y, 3, 3);
+                particles.forEach(q => {
+                    let dist = Math.hypot(p.x - q.x, p.y - q.y);
+                    if (dist < 120) {
+                        ctx.strokeStyle = `rgba(255,255,255,${1 - dist / 120})`;
+                        ctx.beginPath();
+                        ctx.moveTo(p.x, p.y);
+                        ctx.lineTo(q.x, q.y);
+                        ctx.stroke();
+                    }
+                });
+            });
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+  </html>
