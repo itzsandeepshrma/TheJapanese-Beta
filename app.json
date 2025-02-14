@@ -1,1 +1,53 @@
-
+{
+  "name": "Team Japanese - Multi-Platform Userbot",
+  "description": "A powerful multi-platform Userbot supporting Discord, WhatsApp, Telegram, Instagram, and Twitter.",
+  "repository": "https://github.com/TeamJapanese/TheJapanese",
+  "stack": "container",
+  "env": {
+    "PLATFORM": {
+      "description": "Choose the platform to deploy (Discord, WhatsApp, Telegram, Instagram, X)",
+      "required": true
+    },
+    "DISCORD_TOKEN": {
+      "description": "Discord Bot Token (Only for Discord)",
+      "required": false
+    },
+    "TELEGRAM_API_ID": {
+      "description": "Telegram API ID (Only for Telegram)",
+      "required": false
+    },
+    "TELEGRAM_API_HASH": {
+      "description": "Telegram API Hash (Only for Telegram)",
+      "required": false
+    },
+    "TELEGRAM_STRING_SESSION": {
+      "description": "Telegram String Session (Only for Telegram)",
+      "required": false
+    },
+    "WHATSAPP_SESSION": {
+      "description": "WhatsApp Session Key (Only for WhatsApp)",
+      "required": false
+    },
+    "INSTAGRAM_SESSION": {
+      "description": "Instagram Session Key (Only for Instagram)",
+      "required": false
+    },
+    "TWITTER_API_KEY": {
+      "description": "Twitter API Key (Only for Twitter)",
+      "required": false
+    }
+  },
+  "formation": {
+    "worker": {
+      "quantity": 1,
+      "size": "free"
+    }
+  },
+  "buildpacks": [
+    { "url": "heroku/nodejs" },
+    { "url": "heroku/python" }
+  ],
+  "scripts": {
+    "postdeploy": "echo 'Deployment Complete! Set PLATFORM variable to choose a bot.'"
+  }
+}
