@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y \
 
 COPY . .
 
-RUN pip3 install --no-cache-dir -r Telegram/requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 RUN npm install --prefix Discord \
     && npm install --prefix WhatsApp \
