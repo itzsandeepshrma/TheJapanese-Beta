@@ -21,7 +21,7 @@
 # ᴘᴏʀᴛꜰᴏʟɪᴏ ꜰᴏʀ ᴊᴀᴘᴀɴᴇꜱᴇ ᴜꜱᴇʀꜱ
 
 **ᴡᴇ ᴀʟꜱᴏ ᴘʀᴏᴠɪᴅᴇ ᴘᴏʀᴛꜰᴏʟɪᴏ ꜰᴏʀ ᴊᴀᴘᴀɴᴇꜱᴇ ᴜꜱᴇʀꜱ**
-- **[ᴛʜᴇ ᴊᴀᴘᴀɴᴇꜱᴇ ᴜꜱᴇʀ ᴘᴏʀᴛꜰᴏʟɪᴏ](https://github.com/TeamJapanese/TheJapanese-Users-Portfolio)**
+- **[ᴛʜᴇ ᴊᴀᴘᴀɴᴇꜱᴇ ᴜꜱᴇʀ ᴘᴏʀᴛꜰᴏʟɪᴏ](https://github.com/TeamJapanese/TheJapanese-Users-Portfolio/tree/main/Portfolio)**
 
 
 # **ᴍɪᴛ ʟɪᴄᴇɴꜱᴇ**
