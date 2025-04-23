@@ -1,1 +1,1 @@
-## Tbis Is Team Japanese Vs Code Theme 
+## This Is Team Japanese Vs Code Theme 
